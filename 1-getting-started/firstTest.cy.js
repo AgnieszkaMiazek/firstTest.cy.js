@@ -10,6 +10,9 @@ describe("Pierwszy test", () => {
       .type("1234567890")
       .should("have.value", "1234567890");
     cy.get("1234567890").click();
+    cy.contains("login").should("not.exist");
+    cy.get(".css-7afvtf").click();
+    cy.contains("Logout").click();
   });
   it("logowanie na stronę goIT", () => {
     cy.visit("https://www.edu.goit.global/account/login");
@@ -20,5 +23,8 @@ describe("Pierwszy test", () => {
       .type("QA!automation-1")
       .should("have.value", "QA!automation-1");
     cy.get("QA!automation-1").click();
+    cy.contains("login").should("not.exist");
+    cy.get(".css-7afvtf").click();
+    cy.contains("Logout").click();
   });
 });
