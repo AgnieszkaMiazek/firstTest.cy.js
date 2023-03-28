@@ -22,7 +22,6 @@ describe("Pierwszy test", () => {
       .type("QA!automation-1")
       .should("have.value", "QA!automation-1");
     cy.get(".eckniwg2").click();
-
     cy.contains("login").should("not.exist");
     cy.get(".css-7afvtf").click();
   });
