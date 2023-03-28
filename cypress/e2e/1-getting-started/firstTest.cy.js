@@ -26,4 +26,3 @@ describe("Pierwszy test", () => {
     cy.get(".css-7afvtf").click();
   });
 });
-mmmm
