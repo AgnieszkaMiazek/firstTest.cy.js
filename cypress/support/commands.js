@@ -9,10 +9,20 @@
 // ***********************************************
 //
 //
+
+import HomePage from "../pages/HomePage";
+
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
+Cypress.Commands.add,
+  (username, password) => {
+    const homePage = new HomePage();
+    const login = new login();
+
+    homePage.getSignInButton().click();
+    login.getLoginInput().type(username);
+    login.getPasswordInput().type(password);
+    login.getSignInButton().click();
+  };
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
 //
