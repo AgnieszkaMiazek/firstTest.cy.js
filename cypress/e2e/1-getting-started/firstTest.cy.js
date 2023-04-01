@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
-
+import { Login } from "../pages/Login";
+const LoginPage = new Login();
 describe("Pierwszy test", () => {
   it("login", () => {
     cy.visit("https://www.edu.goit.global/account/login");
